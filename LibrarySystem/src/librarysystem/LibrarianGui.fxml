@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarysystem.LibrarianGuiController">
+   <children>
+      <AnchorPane prefHeight="453.0" prefWidth="665.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane fx:id="LibrarianTabPane" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Search">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="bookSearchArea" layoutX="95.0" layoutY="143.0" prefHeight="235.0" prefWidth="506.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></TextArea>
+                              <TextField fx:id="searchBookField" layoutX="226.0" layoutY="59.0" />
+                              <Button fx:id="searchBookBtn" layoutX="389.0" layoutY="59.0" mnemonicParsing="false" onAction="#searchBookButtonPressed" text="Search" />
+                              <Button fx:id="editBookBtn" layoutX="26.0" layoutY="143.0" mnemonicParsing="false" onAction="#editBookButtonPressed" prefHeight="25.0" prefWidth="58.0" text="Edit" />
+                              <Button fx:id="deleteBookBtn" layoutX="26.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Delete" />
+                              <RadioButton fx:id="ISBNRadioButton" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" text="ISBN">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="BookSearchOption" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="titleRadioButton" layoutX="535.0" layoutY="42.0" mnemonicParsing="false" text="Title" toggleGroup="$BookSearchOption" />
+                              <RadioButton fx:id="authorRadioButton" layoutX="528.0" layoutY="63.0" mnemonicParsing="false" text="Author" toggleGroup="$BookSearchOption" />
+                              <RadioButton fx:id="keywordRadioButton" layoutX="534.0" layoutY="90.0" mnemonicParsing="false" text="Keyword" toggleGroup="$BookSearchOption" />
+                              <Text layoutX="102.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+                              <Text layoutX="188.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+                              <Text layoutX="389.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+                              <Text layoutX="482.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
+                              <Text layoutX="273.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Create">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="createTitleField" layoutX="226.0" layoutY="142.0" />
+                              <TextField fx:id="createISBNField" layoutX="226.0" layoutY="91.0" />
+                              <TextField fx:id="createLocationField" layoutX="226.0" layoutY="227.0" />
+                              <TextField fx:id="createAuthorField" layoutX="226.0" layoutY="186.0" />
+                              <Text layoutX="169.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+                              <Text layoutX="163.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+                              <Text layoutX="164.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+                              <Text layoutX="159.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
+                              <Button fx:id="createBookBtn" layoutX="253.0" layoutY="280.0" mnemonicParsing="false" onAction="#createBookButtonPressed" prefHeight="25.0" prefWidth="99.0" text="Create" />
+                              <Text layoutX="216.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter details of new book below" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="editTab" text="Edit">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="editISBNField" layoutX="226.0" layoutY="93.0" />
+                              <TextField fx:id="editTitleField" layoutX="226.0" layoutY="140.0" />
+                              <TextField fx:id="editAuthorField" layoutX="226.0" layoutY="186.0" />
+                              <TextField fx:id="editLocationField" layoutX="226.0" layoutY="234.0" />
+                              <Text fx:id="ISBNLabel" layoutX="155.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+                              <Text fx:id="titleLabel" layoutX="157.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+                              <Text fx:id="authorLabel" layoutX="150.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+                              <Text fx:id="locationLabel" layoutX="149.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
+                              <Button fx:id="submitEditBtn" layoutX="274.0" layoutY="285.0" mnemonicParsing="false" onAction="#editSubmitButtonPressed" text="Submit" />
+                              <Button fx:id="editSearchButton" layoutX="401.0" layoutY="39.0" mnemonicParsing="false" onAction="#editBookButtonPressed" text="OK" />
+                              <TextField fx:id="editSearchField" layoutX="227.0" layoutY="39.0" />
+                              <Text layoutX="140.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search ISBN" />
+                              <Text fx:id="bookEditedText" layoutX="251.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book has been edited" visible="false" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="652.0">
+                           <children>
+                              <TextField fx:id="userReportField" layoutX="336.0" layoutY="308.0" />
+                              <TextArea fx:id="reportArea" layoutX="37.0" layoutY="106.0" prefHeight="195.0" prefWidth="585.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></TextArea>
+                              <Button fx:id="userSearchBtn" layoutX="491.0" layoutY="308.0" mnemonicParsing="false" onAction="#searchReportButtonPressed" text="Generate User Report" />
+                              <Button fx:id="generateReportBtn" layoutX="58.0" layoutY="308.0" mnemonicParsing="false" onAction="#generateReport" text="Genrate Full Report" />
+                              <Text layoutX="453.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner" />
+                              <Text layoutX="58.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+                              <Text layoutX="345.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+                              <Text layoutX="215.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+                              <Text layoutX="131.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+                              <Text layoutX="233.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Username" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

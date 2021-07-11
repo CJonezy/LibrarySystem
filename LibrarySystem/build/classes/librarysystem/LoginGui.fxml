@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarysystem.LoginGuiController">
+   <children>
+      <TextField fx:id="userNameField" layoutX="226.0" layoutY="128.0" />
+      <PasswordField fx:id="passWordField" layoutX="226.0" layoutY="194.0" />
+      <Button fx:id="loginBtn" layoutX="263.0" layoutY="263.0" mnemonicParsing="false" onAction="#loginPressed" prefHeight="37.0" prefWidth="74.0" text="Login" />
+      <Text layoutX="158.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text layoutX="154.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="218.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library System">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text layoutX="406.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="43.25439012050629" />
+      <Text layoutX="409.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin" />
+      <Text layoutX="467.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" />
+      <Text layoutX="532.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Librarian" />
+      <Text layoutX="409.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="admin" />
+      <Text layoutX="477.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123" />
+      <Text layoutX="471.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cj097" />
+      <Text layoutX="545.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="l1" />
+      <Text layoutX="545.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="l1" />
+   </children>
+</AnchorPane>
